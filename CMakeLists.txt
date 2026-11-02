@@ -1,0 +1,41 @@
+cmake_minimum_required(VERSION 3.10) 
+
+project(Snake 
+        VERSION 0.0.0 
+        DESCRIPTION "Snake: Active contour"
+        LANGUAGES CXX)
+
+
+message("CMake Version: ${CMAKE_VERSION}")
+message("OS: ${CMAKE_SYSTEM_NAME}")
+
+
+set(ARCH 32)
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+  Set(ARCH 64)
+endif()
+
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
+set(CMAKE_BUILD_TYPE "Debug")
+
+set(OUTPUT_TARGET_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME}/${ARCH}/${CMAKE_BUILD_TYPE}")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_TARGET_DIRECTORY}/libs/static") # static
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_TARGET_DIRECTORY}/libs/dynamic") # dynamic
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_TARGET_DIRECTORY}")
+
+
+
+
+
+set(ENGINE_TARGET_NAME engine)
+set(APP_TARGET_NAME app)
+
+add_subdirectory(${ENGINE_TARGET_NAME})
+add_subdirectory(${APP_TARGET_NAME})
+
+
+
+
