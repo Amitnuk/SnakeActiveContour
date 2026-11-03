@@ -15,7 +15,9 @@ int Engine::s_iMinRadius = 1;
 int Engine::s_iMaxRadius = 250;   
 cv::Mat ImgDst;
 constexpr float PI = 3.14159265358979323846f;
-
+constexpr float ALPHA = 1.5f;
+constexpr float BETA  = 1.5f;
+constexpr float GAMMA = 1.5f;
 Engine::Engine( const std::string& sImagePath)
 : m_sImagePath(sImagePath)
 , m_oImage(cv::imread(m_sImagePath))
@@ -419,11 +421,11 @@ void Engine::minimizeTotalEnergy()
           if((iRow > 0 && iRow < iHeight) && (iCol > 0 && iCol < iWidth))
           {
             cv::Point2f vCandidate(iCol, iRow);
-            float fValue = oEnergyImage.at<float>(iRow,iCol);
+            float fEnergyImage = oEnergyImage.at<float>(iRow,iCol);
             float fEnergyElastic = std::pow(cv::norm(vNextPoint - vCandidate),2);
             float fEnergySmooth = std::pow(cv::norm(vNextPoint - 2*vCandidate + vPrevPoint),2);
             
-            float fTotalEnergy = fValue + fEnergySmooth + fEnergyElastic;
+            float fTotalEnergy = GAMMA * fEnergyImage + ALPHA * fEnergySmooth + BETA * fEnergyElastic;
             if(  fTotalEnergy < fMinValue )
             {
               fMinValue =  fTotalEnergy;
