@@ -61,4 +61,4 @@ The process repeats until convergence or until the maximum number of iterations 
 
 ## Notes
 
-This is a basic educational implementation. It is not intended to provide a robust or optimized segmentation solution for arbitrary images.
+This is a basic educational implementation. It is not intended to provide a robust or optimized segmentation solution.
