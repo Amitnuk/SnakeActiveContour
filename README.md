@@ -45,6 +45,13 @@ $$
 
 The process repeats until convergence or until the maximum number of iterations is reached.
 
+
+
+## Demo
+
+![Snake Active Contour Demo](resources/triangle.gif)
+![Snake Active Contour Demo](resources/shapes.gif)
+
 ## Notes
 
 This is a basic educational implementation. It is not intended to provide a robust or optimized segmentation solution for arbitrary images.

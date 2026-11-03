@@ -10,7 +10,7 @@
 
 int main([[maybe_unused]]int arc, [[maybe_unused]]char* argv[])
 {
-  const std::string& sImagePath = GetResourcesDir() + "triangle.png";
+  const std::string& sImagePath = GetResourcesDir() + "shapes.png";
    
   Engine oEngine(sImagePath);
   oEngine.run();
