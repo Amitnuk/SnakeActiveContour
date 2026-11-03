@@ -26,7 +26,7 @@ From the project root directory:
 ```bash
 cmake -S . -B build
 cmake --build build
-./bin/Linux/64/Debug/app
+./bin/Linux/64/{Debug/Release}/app
 ```
 
 Or execute everything in one command:
@@ -34,6 +34,8 @@ Or execute everything in one command:
 ```bash
 cmake -S . -B build && cmake --build build && ./bin/Linux/64/Debug/app
 ```
+
+After drawing press ```d``` 
 
 ## Implementation
 
