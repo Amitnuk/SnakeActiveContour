@@ -49,8 +49,13 @@ The process repeats until convergence or until the maximum number of iterations 
 
 ## Demo
 
-![Snake Active Contour Demo](resources/triangle.gif)
-![Snake Active Contour Demo](resources/shapes.gif)
+
+<table>
+  <tr>
+    <td><img src="resources/triangle.gif" width="400"></td>
+    <td><img src="resources/shapes.gif" width="400"></td>
+  </tr>
+</table>
 
 ## Notes
 
