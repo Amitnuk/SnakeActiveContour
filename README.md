@@ -32,7 +32,7 @@ cmake --build build
 Or execute everything in one command:
 
 ```bash
-cmake -S . -B build && cmake --build build && ./bin/Linux/64/Debug/app
+cmake -S . -B build && cmake --build build && ./bin/Linux/64/{Debug/Release}/app
 ```
 
 After drawing press ```d``` 
