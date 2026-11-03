@@ -10,7 +10,7 @@
 
 int main([[maybe_unused]]int arc, [[maybe_unused]]char* argv[])
 {
-  const std::string& sImagePath = "/home/kuntima/Workspace/githubs/SnakeActiveContour/resources/circle.png";
+  const std::string& sImagePath = "/home/kuntima/Workspace/githubs/SnakeActiveContour/resources/triangle.png";
    
   Engine oEngine(sImagePath);
   oEngine.run();
