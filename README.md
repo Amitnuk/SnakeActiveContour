@@ -1,6 +1,6 @@
 # Snake Active Contour
 
-A naive implementation of the **Snake Active Contour** algorithm using **C++ and OpenCV**.
+A naive implementation of the **Snake Active Contour** algorithm using **C++ and OpenCV** for visualization purposes only.
 
 This project implements a simple **greedy approach** to active contour optimization. The snake evolves by iteratively moving its control points to minimize an energy function composed of:
 
