@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Engine.hpp"
-
+#include "config.h"
 
 
 
@@ -10,7 +10,7 @@
 
 int main([[maybe_unused]]int arc, [[maybe_unused]]char* argv[])
 {
-  const std::string& sImagePath = "/home/kuntima/Workspace/githubs/SnakeActiveContour/resources/triangle.png";
+  const std::string& sImagePath = GetResourcesDir() + "triangle.png";
    
   Engine oEngine(sImagePath);
   oEngine.run();
